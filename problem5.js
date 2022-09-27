@@ -1,10 +1,20 @@
 function prime(num){
-        for(k=2;k<=(num**1/2);k++){
-            if(num%k==0){
-                return false;
-            }
+    let isPrime = true;
+    if (num > 1) {
+
+    
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) {
+            isPrime = false;
+            break;
         }
-        return true;
     }
-let num=10;
+    if (isPrime) {
+        console.log("Yes");
+    } else {
+        console.log("No");
+    }
+}
+}
+
 console.log(prime(10));
